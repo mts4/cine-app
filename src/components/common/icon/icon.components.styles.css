@@ -1,0 +1,7 @@
+.logoWeb{
+    position: absolute;
+    height: 50px;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);;
+}

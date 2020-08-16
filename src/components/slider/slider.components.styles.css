@@ -1,0 +1,44 @@
+.sliderMovie{
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.sliderMovie .react-slideshow-container+div.indicators li{
+  width: 15px;
+  height: 15px;
+  padding: 10px;
+}
+
+.sliderMovie .react-slideshow-container+div.indicators .each-slideshow-indicator:before{
+  width: 15px;
+  height: 15px;
+}
+
+.sliderMovie .react-slideshow-container {
+  display: flex;
+  align-items: center;
+}
+
+.sliderMovie .imgSlider{
+  width: 100%;
+  filter: brightness(35%);
+}
+
+.sliderMovie .txtTitle{
+  font-family: Quicksand,sans-serif;
+  font-weight: 900;
+  margin: auto;
+  position: absolute;
+  height: 20px;
+  max-width: 900px;
+  left: 0;
+  bottom: 20%;
+  right: 0;
+  z-index: 2;
+  color: white;
+  text-transform: uppercase;
+  font-size: 50px;
+  line-height: 50px;
+  text-align: center;
+}
