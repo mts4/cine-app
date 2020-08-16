@@ -4,6 +4,12 @@
   width: 100%;
 }
 
+  @media (max-width: 768px) {
+    .sliderMovie {
+      padding-top: 95px;
+    }
+  }
+
 .sliderMovie .react-slideshow-container+div.indicators li{
   width: 15px;
   height: 15px;
@@ -42,3 +48,31 @@
   line-height: 50px;
   text-align: center;
 }
+
+  @media (max-width: 768px) {
+    .sliderMovie .txtTitle {
+      font-size: 30px;
+      line-height: 30px;
+    }
+  }
+
+
+.slideDesktop{
+  display: block;
+}
+
+  @media (max-width: 768px) {
+    .slideDesktop {
+      display: none;
+    }
+  }
+
+.slideMobile{
+    display: none;
+  }
+  
+    @media (max-width: 768px) {
+      .slideMobile {
+        display: block;
+      }
+    }

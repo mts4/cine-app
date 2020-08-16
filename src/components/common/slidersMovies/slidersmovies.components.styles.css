@@ -5,6 +5,13 @@
     border-radius: 10px;
     box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 15px 0 rgba(0, 0, 0, 0.19);
 }
+
+    @media (max-width: 768px) {
+        .movie_card {
+            margin:0px;
+            margin-top: 20px;
+        }
+    }
 .movie_card img{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;

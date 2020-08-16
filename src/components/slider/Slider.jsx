@@ -4,9 +4,14 @@ import 'react-slideshow-image/dist/styles.css'
 import './slider.components.styles.css'
 
 //Import Image Sliders
-import Slide1 from '../../assets/img/slider1.jpg'
-import Slide2 from '../../assets/img/slider2.jpg'
-import Slide3 from '../../assets/img/slider3.jpg'
+import SlideDesktop1 from '../../assets/img/slider1.jpg'
+import SlideMobile1 from '../../assets/img/slider1-mobile.jpg'
+
+import SlideDesktop2 from '../../assets/img/slider2.jpg'
+import SlideMobile2 from '../../assets/img/slider2-mobile.jpg'
+
+import SlideDesktop3 from '../../assets/img/slider3.jpg'
+import SlideMobile3 from '../../assets/img/slider3-mobile.jpg'
 
 const Slider = () => {
 
@@ -14,15 +19,18 @@ const Slider = () => {
     const slide = {
       results : [
         {
-          url : `${Slide1}`,
+          urlDesktop : `${SlideDesktop1}`,
+          urlMobile : `${SlideMobile1}`,
           text : "¡Disfruta con tu pareja!"
         },
         {
-          url : `${Slide2}`,
+          urlDesktop : `${SlideDesktop2}`,
+          urlMobile : `${SlideMobile2}`,
           text : "Tus hijos se divertiran"
         },
         {
-          url : `${Slide3}`,
+          urlDesktop : `${SlideDesktop3}`,
+          urlMobile : `${SlideMobile3}`,
           text : "Acompañado de Pop Corns"
         }
       ]
@@ -43,7 +51,8 @@ const Slider = () => {
             { 
               slide.results.map((item, index) => 
                 <div key={index}>
-                  <img  className="img-fluid imgSlider" src={item.url} alt="imagen del slider" />
+                  <img  className="img-fluid imgSlider slideDesktop" src={item.urlDesktop} alt="imagen del slider Desktop" />
+                  <img  className="img-fluid imgSlider slideMobile" src={item.urlMobile} alt="imagen del slider Mobile" />
                   <span className="txtTitle">{item.text}</span>
                 </div>
               )
