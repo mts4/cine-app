@@ -11,8 +11,6 @@ const MoviesProvider = (props) => {
     const [moviesRomance, setMoviesRomance] = useState([])
 
     useEffect(() => getMoviesPopular(), []);
-    useEffect(() => getMoviesTerror(), []);
-    useEffect(() => getMoviesRomance(), []);
 
     const getMoviesPopular = () => {
         fetch(FetchTopRated())
@@ -48,8 +46,10 @@ const MoviesProvider = (props) => {
                     moviesPopular, 
                     getMoviesAction,
                     moviesAction,
+                    getMoviesTerror,
                     moviesTerror,
-                    moviesRomance 
+                    getMoviesRomance,
+                    moviesRomance
                 }}>
             { props.children }
         </MoviesContext.Provider>

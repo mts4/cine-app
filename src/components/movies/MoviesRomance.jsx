@@ -1,11 +1,13 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { MoviesContext } from '../../contexts/MoviesProvider'
 import SlidersMovies from '../common/slidersMovies/SlidersMovies'
 import Slider from '../slider/Slider'
 
 const MoviesRomance = () => {
 
-    const { moviesRomance } = useContext( MoviesContext )
+    const { getMoviesRomance, moviesRomance } = useContext( MoviesContext )
+
+    useEffect(() => getMoviesRomance(), []);
 
     return (
         <>
