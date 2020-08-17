@@ -11,7 +11,6 @@ const MoviesProvider = (props) => {
     const [moviesRomance, setMoviesRomance] = useState([])
 
     useEffect(() => getMoviesPopular(), []);
-    useEffect(() => getMoviesAction(), []);
     useEffect(() => getMoviesTerror(), []);
     useEffect(() => getMoviesRomance(), []);
 
@@ -44,7 +43,14 @@ const MoviesProvider = (props) => {
     }
 
     return (
-        <MoviesContext.Provider value={{ moviesPopular, moviesAction, moviesTerror, moviesRomance }}>
+        <MoviesContext.Provider 
+            value={{ 
+                    moviesPopular, 
+                    getMoviesAction,
+                    moviesAction,
+                    moviesTerror,
+                    moviesRomance 
+                }}>
             { props.children }
         </MoviesContext.Provider>
     )
