@@ -1,7 +1,10 @@
 import React from 'react'
-import { Zoom } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css'
 import './slider.components.styles.css'
+
+import Slider from "react-slick";
+// Import css files
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 //Import Image Sliders
 import SlideDesktop1 from '../../assets/img/slider1.jpg'
@@ -13,7 +16,7 @@ import SlideMobile2 from '../../assets/img/slider2-mobile.jpg'
 import SlideDesktop3 from '../../assets/img/slider3.jpg'
 import SlideMobile3 from '../../assets/img/slider3-mobile.jpg'
 
-const Slider = () => {
+const SliderTop = () => {
 
     //Array Images and text
     const slide = {
@@ -36,30 +39,29 @@ const Slider = () => {
       ]
     }
 
-    const zoomInProperties = {
-      indicators: true,
-      scale: 1.2,
-      duration: 2500,
-      transitionDuration: 500,
-      infinite: true,
-      arrows: false
-    }
+    const settings = {
+        dots: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        speed: 2000,
+        autoplaySpeed: 3000,
+        arrows: false
+    };
 
     return (
-        <div className="slide-container sliderMovie">
-          <Zoom {...zoomInProperties}>
+          <Slider {...settings} className="sliderMovies">
             { 
               slide.results.map((item, index) => 
-                <div key={index}>
+                <div key={index} className="boxSliderMovies">
                   <img  className="img-fluid imgSlider slideDesktop" src={item.urlDesktop} alt="imagen del slider Desktop" />
                   <img  className="img-fluid imgSlider slideMobile" src={item.urlMobile} alt="imagen del slider Mobile" />
                   <span className="txtTitle">{item.text}</span>
                 </div>
               )
             }
-          </Zoom>
-      </div>
+          </Slider>
     )
 }
 
-export default Slider
+export default SliderTop

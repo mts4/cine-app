@@ -15,6 +15,8 @@ const SlidersMovies = ({movies}) => {
         slidesToScroll: 3,
         speed: 2000,
         autoplaySpeed: 3000,
+        prevArrow: false,
+        nextArrow: false,
         responsive: [
             {
               breakpoint: 1024,
@@ -47,26 +49,27 @@ const SlidersMovies = ({movies}) => {
     return (
         <div className="col-12">
             <Slider {...settings} className="sliderMovies">
-            {
-                movies.map(item => (
-                    <div key={item.id} className="sliderCard">
-                        <div className="card movie_card" >
-                            <div className="card-body">
-                                <a href="http://" target="_blank" rel="noopener noreferrer">
-                                    <i className="fas fa-play play_button" data-toggle="tooltip" data-placement="bottom" title="Play Trailer">
-                                    </i>
-                                </a>
-                                <h5 className="card-title">{item.title}</h5>
-                                <span className="movie_info">{item.release_date}</span>
-                                <span className="movie_info float-right">
-                                    <i className="fas fa-star"></i> {item.vote_average}
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                ))
-            }
-        </Slider>
+              {
+                  movies.map(item => (
+                      <div key={item.id} className="sliderCard">
+                          <div className="card movie_card" >
+                              <img src={"https://image.tmdb.org/t/p/original" + item.poster_path} className="card-img-top" alt="Imagen de cartelera" />
+                              <div className="card-body">
+                                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                                      <i className="fas fa-play play_button" data-toggle="tooltip" data-placement="bottom" title="Play Trailer">
+                                      </i>
+                                  </a>
+                                  <h5 className="card-title">{item.title}</h5>
+                                  <span className="movie_info">{item.release_date}</span>
+                                  <span className="movie_info float-right">
+                                      <i className="fas fa-star"></i> {item.vote_average}
+                                  </span>
+                              </div>
+                          </div>
+                      </div>
+                  ))
+              }
+            </Slider>
         </div>
     )
 }

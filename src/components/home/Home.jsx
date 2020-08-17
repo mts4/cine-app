@@ -1,12 +1,12 @@
 import React from 'react'
-import Slider from '../slider/Slider'
+import SliderTop from '../sliderTop/SliderTop'
 import MoviesTop from '../movies/MoviesTop'
 
 
 const Home = () => {
     return (
         <>
-            <Slider />
+            <SliderTop />
             <div className="container">
                 <MoviesTop />
             </div>

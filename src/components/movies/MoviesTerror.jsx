@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import { MoviesContext } from '../../contexts/MoviesProvider'
 import SlidersMovies from '../common/slidersMovies/SlidersMovies'
-import Slider from '../slider/Slider'
+import SliderTop from '../sliderTop/SliderTop'
 
 const MoviesTerror = () => {
 
@@ -11,7 +11,7 @@ const MoviesTerror = () => {
 
     return (
         <>
-            <Slider />
+            <SliderTop />
             <div className="container">
                 <div className="row mt-5">
                     <div className="col-12">

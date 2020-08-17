@@ -70,17 +70,3 @@
 .credits .card-body i{
     color: #8e24aa;
 }
-
-.sliderMovies .sliderCard {
-    position: relative;
-    display: block;
-    padding: 20px;
-}
-
-.sliderMovies .slick-dots{
-    bottom: -55px;
-}
-
-.sliderMovies .slick-dots li button:before{
-    font-size: 20px;
-}
