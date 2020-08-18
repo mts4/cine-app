@@ -15,8 +15,7 @@ const SlidersMovies = ({movies}) => {
         slidesToScroll: 3,
         speed: 2000,
         autoplaySpeed: 3000,
-        prevArrow: false,
-        nextArrow: false,
+        arrows: false,
         responsive: [
             {
               breakpoint: 1024,

@@ -21,15 +21,21 @@
   text-align: center;
 }
 
+  @media (max-width: 576px) {
+    .sliderMovies .txtTitle {
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+
 .boxSliderMovies{
   position: relative;
   display: block;
 }
 
-  @media (max-width: 768px) {
-    .sliderMovie .txtTitle {
-      font-size: 30px;
-      line-height: 30px;
+  @media (max-width: 500px) {
+    .boxSliderMovies {
+      padding-top: 75px;
     }
   }
 

@@ -17,3 +17,11 @@ html, body {
 .sliderMovies .slick-dots li button:before{
     font-size: 20px;
 }
+
+.mt-7{
+    margin-top: 7rem!important;
+}
+
+.bg-light2{
+    background: #e7edef;
+}

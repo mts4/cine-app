@@ -16,7 +16,7 @@ import SlideMobile2 from '../../assets/img/slider2-mobile.jpg'
 import SlideDesktop3 from '../../assets/img/slider3.jpg'
 import SlideMobile3 from '../../assets/img/slider3-mobile.jpg'
 
-const SliderTop = () => {
+const SliderPrincipal = () => {
 
     //Array Images and text
     const slide = {
@@ -64,4 +64,4 @@ const SliderTop = () => {
     )
 }
 
-export default SliderTop
+export default SliderPrincipal
